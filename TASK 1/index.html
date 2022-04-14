@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Website</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body{
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .fa-navicon:before, .fa-reorder:before, .fa-bars:before {
+            content: "\f0c9";
+            color: black;
+        }
+        .topnav {
+            overflow: hidden;
+            background-color: #d6c7ec;
+        }
+        .topnav a {
+            float: left;
+            display: block;
+            color: #000;
+            text-align: center;
+            padding: 14px 30px;
+            text-decoration: none;
+            font-size: 18px;
+        } 
+        .topnav a:hover {
+            background-color: rgb(253, 240, 50);
+            color: #f7eb4e;
+        } 
+        .topnav a.active {
+            background-color: #f8ca0e;
+            color: white;
+        }
+        .topnav .icon {
+            display: none;
+        }
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child) {
+                display: none;
+            }
+            .topnav a.icon {
+            float: right;
+            display: block;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {
+                position: relative;
+            }
+            .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+            }
+            .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+            }
+        }
+    </style>
+</head>
+<body> 
+    <div id="fixednav">
+        <div class="topnav" id="myTopnav">
+            <a href="./index.html" class="active">Home</a>
+            <a href="#projectsec">Projects</a>
+            <a href="#pricingsec">About Us</a>
+            <a href="#teamsec">Team</a>
+            <a href="#signupsec">Signup</a>
+            <a href="#blogsec"> Blog </a>
+            <a href="javascript:void(0);" class="icon" onclick="ToggleFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+    </div>
+    <img src="images/top1.png" style="width: 100%;" id="img1">
+    <hr>
+    <br/>
+    <div id="introSection">
+        <div id="introSectionFlex"> 
+            <p id="mainPara"> Our goal is to help others to gain personal and professional skills in the area of Technological development. The purpose is to provide a structure through which students may exercise their right to freely associate in pursuit of a common purpose or goal that enhances community at LetsGrowMore. </p>
+        <img style="width: 300px;" src="images/internship.png" alt="internship"/>
+        </div>
+        
+        <div class="introGrid">
+            <div class="intro"> 
+                <p class="alignImage"> <img src="images/webd.png" alt="web Development"/> </p>
+                <h4 class="introTitle"> Web Development </h4>
+                <p class="elementor-image-box-title">Launch your career in a competitive and interdisciplinary field with web development internships. According to clients requirement, you have to make a website, content and have to do some effective social media strategy to help clients. </p>
+                <p class="alignButton"> <input type="button" value="Learn More"/> </p>
+            </div>
+            <div class="intro"> 
+                <p class="alignImage"> <img src="images/datascience.jpg" alt="datascience"/> </p>
+                <h4 class="introTitle"> Data Science </h4>
+                <p class="elementor-image-box-title"> Launch your career in a competitive and interdisciplinary field with data science internships. Get technical training, hands-on experience, and develop a top-tier portfolio through an immersive data analysis placement with a top international organization. </p><br>
+                <p class="alignButton"> <input type="button" value="Learn More"/> </p>
+            </div>
+            <div class="intro"> 
+                <p class="alignImage"> <img src="images/android.jpg" alt="android Development"/> </p>
+                <h4 class="introTitle"> Android Development </h4>
+                <p class="elementor-image-box-title">  Launch your career in a competitive and interdisciplinary field with Android Development internships. Get technical training, hands-on experience, and develop a top-tier portfolio through an immersive data and placement with a top international organization.</p>
+                <p class="alignButton"> <input type="button" value="Learn More"/> </p>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <h1 class="projectTitle" id="projectsec"> Projects </h1>
+    <div id="projectSection">
+        <div class="project">
+            <div class="projectImageDiv">
+                <img style="width: 250px;" src="images/project1.jpg" alt="blog" class="projectImage">
+            </div>
+            <h3 class="projectInternalTitle"> To-do List </h3>
+            <div class="projectInternalDescription">
+                <p class="projectDescription"> You have to create a TODO LIST WebApp and that should be hosted on GitHub and should be working. </p>
+                <p class="alignButtonProjects"> <input type="button" value="Launch Case Study"/> </p>
+            </div>
+        </div>
+        <div class="project">
+            <div class="projectImageDiv"> 
+                <img style="width: 250px;" src="images/Project2.jpg" alt="mobile" class="projectImage">
+            </div>
+            <h3 class="projectInternalTitle">User card grid </h3>
+            <div class="projectInternalDescription">
+                <p class="projectDescription"> Create a web application using create-react-app. Add a button in the navbar saying 'Get Users', which makes an API call to get the user data. </p>
+                <p class="alignButtonProjects"> <input type="button" value="Launch Case Study"/> </p>
+            </div>
+        </div>
+        <div class="project">
+            <div class="projectImageDiv">  
+                <img style="width: 250px;" src="images/project3.png" alt="webDesigner" class="projectImage">
+            </div>
+            <h3 class="projectInternalTitle"> Registration Form </h3>
+            <div class="projectInternalDescription">
+                <p class="projectDescription"> You have to create a Registration Form whose data display in same page that should be hosted on GitHub and working. </p>
+                <p class="alignButtonProjects"> <input type="button" value="Launch Case Study"/> </p>
+            </div>
+        </div>
+        <div class="project">
+            <div class="projectImageDiv"> 
+                <img style="width: 250px;" src="images/project4.png" alt="exhibition" class="projectImage">
+            </div>
+            <h3 class="projectInternalTitle">Calculator </h3>
+            <div class="projectInternalDescription">
+                <p class="projectDescription">You have to create a Simple Calculator using HTML, CSS, JavaScript that should be hosted on GitHub and working  </p>
+                <p class="alignButtonProjects"> <input type="button" value="Launch Case Study"/> </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h1 class="pricingTitle">About Us </h1>
+        <div id="pricingDescription" class="introGrid">
+            <div class="intro"> 
+                <h4 class="introTitle"> Community </h4>
+                <p class="elementor-image-box-title"> Meeting new students, making connections, and building relationships will all help down the line when you’re looking for a job. Because you’re all part of the same organisation, you know the people your meeting have at least a few of the same interests as you, so their connections will be valuable. </p>
+                <p class="alignButtonPricing"> <input type="button" value="Learn More"/> </p>
+            </div>
+            <div class="intro"> 
+                <h4 class="introTitle"> Real Time Skill Development</h4>
+                <p class="elementor-image-box-title"> By participating in a student organisation you can develop soft skills that are essentially “people skills” — they’re the skills that allow us to effectively interact with others, like communication, attitude, and work ethic. We will not only teach you these skills, but will also helps you broaden and improve those you already have. </p>
+                <p class="alignButtonPricing"> <input type="button" value="Learn More"/> </p>
+            </div>
+            <div class="intro"> 
+                <h4 class="introTitle"> Immense Learning </h4>
+                <p class="elementor-image-box-title"> Participating in an organisation based around your particular area of study will give you practical experience within that field. And what’s great about student communities is that while you learn to use skills like project management, event planning, and fundraising, you get to test them out in a safe environment where making mistakes is OK. </p>
+                <p class="alignButtonPricing"> <input type="button" value="Learn More"/> </p>
+            </div>
+    </div>
+    <div>
+        <h1 class="videosTitle"> Videos </h1>
+        <div style="background-color: #e2eedc; padding: 30px;" class="introGrid">
+            <iframe src="https://www.youtube.com/embed/SI5ISZa0IL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="420" height="200" src="https://www.youtube.com/embed/mKSWAlvXSmw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+            <iframe width="420" height="200" src="https://www.youtube.com/embed/uPEflEXJec4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <h1 class="teamTitle" id="teamsec"> LGM Team </h1>
+    <div id="teamSection">
+        <div class="introGrid">
+            <div class="centerGridTeam">
+                <img src="images/face1.png" alt="One" class="faces"> 
+                <br/> <p style="text-align: center;"> Name | Designation </p>
+            </div>
+            <div class="centerGridTeam">
+                <img src="images/face2.jpg" alt="Two" class="faces">
+                <br/> <p style="text-align: center;"> Name | Designation </p>
+            </div>
+            <div class="centerGridTeam">
+                <img src="images/face3.jpg" alt="Three" class="faces">
+                <br/> <p style="text-align: center;"> Name | Designation </p>
+            </div>
+        </div>
+        <div class="introGrid">
+            <div class="centerGridTeam">
+                <img src="images/face4.jfif" alt="One" class="faces"> 
+                <br/> <p style="text-align: center;"> Name | Designation </p>
+            </div>
+            <div class="centerGridTeam">
+                <img src="images/face5.jpg" alt="Two" class="faces">
+                <br/> <p style="text-align: center;"> Name | Designation </p>
+            </div>
+            <div class="centerGridTeam">
+                <img src="images/face6.jpg" alt="Three" class="faces">
+                <br/> <p style="text-align: center;"> Name | Designation </p>
+            </div>
+        </div>
+    </div>
+    <h1 class="newsletterTitle"> Signup </h1>
+    <div id="newsletterExternalStyle">
+        <div id="newsletterInternalStyle">
+            <input type="text" name="newsletter" id="newsletter"/> <input type="submit" name="newsletterSubmit" id="newsletterSubmit"/>
+        </div>
+    </div>
+    <h1 class="blogTitle" id="blogsec"> Blog </h1>
+    <div id="blogSection">
+        <div class="project">
+            <div class="projectImageDiv">
+                <img style="width: 250px;" src="images/project1.jpg" alt="webdevelopment" class="projectImage">
+            </div>
+            <h3 class="projectInternalTitle"> Work Updates</h3>
+            <div class="projectInternalDescription">
+                <p class="projectDescription"> At our Community, we maintain a record of how much work you have done on a regular basis to keep a track of the work in order to meet the deadlines. </p>
+                <center> <input type="button" value="Read More"/> </center>
+            </div>
+        </div>
+        <div class="project">
+            <div class="projectImageDiv"> 
+                <img style="width: 250px;" src="images/Project2.jpg" alt="datascience" class="projectImage">
+            </div>
+            <h3 class="projectInternalTitle"> Work with True Innovators </h3>
+            <div class="projectInternalDescription">
+                <p class="projectDescription"> We approach problems differently, are constantly finding solutions, and are driven to make the most out of our time and work. </p>
+                <center> <input type="button" value="Read More"/> </center>
+            </div>
+        </div>
+        <div class="project">
+            <div class="projectImageDiv">  
+                <img style="width: 250px;" src="images/project4.png" alt="androiddeveloper" class="projectImage">
+            </div>
+            <h3 class="projectInternalTitle">More Opportunities</h3>
+            <div class="projectInternalDescription">
+                <p class="projectDescription"> Here, at our community you will be given many opportunities to learn and practice variety of new skills. </p>
+                <center> <input type="button" value="Read More"/> </center>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a href="#">FAQ</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Term of Use</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Refund Policy</a>
+        <a href="#">&copy; 2021 | LGMVIP'21</a> 
+      </footer>
+
+    <script src="./task.js"> </script>
+</body>
+</html>
+
